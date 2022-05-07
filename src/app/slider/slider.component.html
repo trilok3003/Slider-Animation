@@ -1,0 +1,10 @@
+<ng-container *ngFor="let slide of [1,2,3,4,5]">
+<button (click)="show(slide)">{{slide}}</button>
+</ng-container>
+<div [ngSwitch]="panel" style="position:relative; overflow:hidden; min-height:100px;">
+<ng-container *ngFor="let slide of [1,2,3,4,5]">
+  <div @anim *ngSwitchCase="slide">
+  <img src="https://picsum.photos/seed/picsum/200/300">
+  </div>
+</ng-container>
+</div>
